@@ -153,6 +153,7 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   gap: 1.5rem;
 }
 
@@ -275,8 +276,16 @@ p {
 .pastel-beige  { background-color: #f4dcb8; }
 .light-yellow { background-color: #f4eeba; }
 
+.two-columns {
+  display: flex;
+  gap: 1.5rem;
+}
 
 .item {
-  flex-basis: 50%;
-  box-sizing: border-box;
+  flex: 1;
+}
+
+.contact-photo {
+  border-radius: 50%;
+  object-fit: cover;
 }
