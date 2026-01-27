@@ -149,6 +149,12 @@ p {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .header-image {
+    width: 100%;
+  }
+}
+
 .flex-container {
   display: flex;
   align-items: center;
@@ -162,6 +168,12 @@ p {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .divider-image {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -283,7 +295,7 @@ p {
 
 @media (max-width: 768px) {
   .two-columns {
-    flex-direction: column; /* mobile = rows */
+    flex-direction: column;
   }
 }
 
