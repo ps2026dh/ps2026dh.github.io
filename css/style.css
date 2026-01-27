@@ -1,0 +1,282 @@
+/* alegreya-sc-regular - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Alegreya SC';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/alegreya-sc-v26-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Alegreya SC', sans-serif;
+  margin: 0;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 5rem;
+  line-height: 4rem;
+}
+
+.semi-title {
+  font-size: 2rem;
+}
+
+h2 {
+  padding-top: 3rem;
+  font-size: 3.2rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.logo a:hover {
+  opacity: 0.5;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+  }
+}
+
+.menu a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.menu a:hover {
+  opacity: 0.5;
+}
+
+.hamburger {
+   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #222;
+  }
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: #222;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.header-image {
+  width: 85%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.divider-image {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .divider-image {
+    width: 80%;
+  }
+}
+
+.date-text {
+  font-size: 3rem;
+}
+
+.place-text {
+  font-size: 2rem;
+}
+
+.time-text {
+  font-size: 1.5rem;
+}
+
+.instructions-list {
+  font-size: 1.5rem;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Sliding panel */
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: -15rem;
+  width: 15rem;
+  height: 100%;
+  background: #ffffff;
+  transition: right 0.3s ease;
+  z-index: 1001;
+  padding: 20px 20px;
+}
+
+.menu-panel ul {
+  list-style: none;
+}
+
+.menu-panel ul li {
+  margin: 20px 0;
+}
+
+.menu-panel ul li a {
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+/* Toggle effect */
+#menu-toggle:checked ~ .menu-panel {
+  right: 0; /* slide in */
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.menu-panel .hamburger.close {
+  font-size: 3.5rem;
+  margin-left: auto;
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+}
+
+#menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto; /* clickable */
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #c8c5c5;
+}
+
+.palette-row {
+  display: flex;
+  gap: 15px;
+}
+
+.yellow-green { background-color: #dde6ad; }
+.soft-green { background-color: #c2dcb9; }
+.light-green { background-color: #006e41; }
+.dark-green { background-color: #123e2d; }
+.teal { background-color: #aad5c4; }
+.aqua { background-color: #a8d3d9; }
+.sky-blue { background-color: #a6d6e4; }
+.soft-blue { background-color: #a5d4f2; }
+.lavender-blue { background-color: #a9b9db; }
+.light-purple { background-color: #b5a8d1; }
+.pink-purple { background-color: #d3b1d2; }
+.pastel-pink { background-color: #eeafce; }
+.light-pink { background-color: #f5cfd3; }
+.soft-peach { background-color: #ecb8a0; }
+.pastel-beige  { background-color: #f4dcb8; }
+.light-yellow { background-color: #f4eeba; }
+
+
+.item {
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
