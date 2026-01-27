@@ -356,3 +356,14 @@ p {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.main-image {
+  width: 60%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .main-image {
+    width: 80%;
+  }
+}
