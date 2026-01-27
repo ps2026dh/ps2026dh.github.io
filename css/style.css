@@ -248,15 +248,15 @@ p {
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   border: 1px solid #c8c5c5;
 }
 
 .palette-row {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .yellow-green { background-color: #dde6ad; }
@@ -279,6 +279,12 @@ p {
 .two-columns {
   display: flex;
   gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column; /* mobile = rows */
+  }
 }
 
 .item {
