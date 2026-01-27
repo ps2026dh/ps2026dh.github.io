@@ -260,15 +260,15 @@ p {
 }
 
 .circle {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   border: 1px solid #c8c5c5;
 }
 
 .palette-row {
   display: flex;
-  gap: 10px;
+  gap: 7px;
 }
 
 .yellow-green { background-color: #dde6ad; }
